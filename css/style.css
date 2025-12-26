@@ -639,11 +639,11 @@ p {
 }
 
 .mockup-card--3 {
-    bottom: 20px;  /* CAMBIA de bottom: 0 a bottom: 20px */
-    left: -5%;  /* CAMBIA de left: 20% a left: 15% para más separación */
+    bottom: 20px;
+    left: -5%;
     width: 260px;
-    animation-delay: 0s;  /* CAMBIA de 4s a 0s para que empiece flotando desde el inicio */
-    z-index: 1;  /* AGREGA esta línea - la más atrás */
+    animation-delay: 0s;
+    z-index: 1;
 }
 
 @keyframes floatCard {
@@ -1237,6 +1237,23 @@ p {
 .metric__label {
     font-size: var(--font-size-xs);
     color: var(--color-gray-600);
+}
+/* Badge Cliente Destacado */
+.testimonio-card__badge-destacado {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: linear-gradient(135deg, #7f47dd 0%, #a855f7 100%);
+    color: white;
+    border-radius: 50px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: var(--space-lg);
+}
+
+.testimonio-card__badge-destacado i {
+    font-size: 1rem;
 }
 
 /* Trust Section */
@@ -2034,16 +2051,16 @@ p {
 
 
     .nav__logo {
-        font-size: var(--font-size-base);  /* AGREGA - reduce aún más en tablets */
+        font-size: var(--font-size-base);
     }
     
     .nav__logo i {
-        font-size: 1.25rem;  /* AGREGA - reduce el ícono en tablets */
+        font-size: 1.25rem;
     }
     
     .nav__link {
-        padding: var(--space-sm);  /* AGREGA - reduce padding de enlaces */
-        font-size: var(--font-size-xs);  /* AGREGA - reduce fuente de enlaces */
+        padding: var(--space-sm);
+        font-size: var(--font-size-xs);
     }
 }
 
@@ -2079,11 +2096,11 @@ p {
     }
     
     .nav__logo {
-        font-size: var(--font-size-base);  /* AGREGA - logo más pequeño en móvil */
+        font-size: var(--font-size-base);
     }
     
     .nav__logo i {
-        font-size: 1.25rem;  /* AGREGA - ícono más pequeño en móvil */
+        font-size: 1.25rem;
     }
     
     .nav__list {
@@ -2095,7 +2112,7 @@ p {
     .nav__link {
         padding: var(--space-lg);
         border-bottom: 1px solid var(--color-gray-200);
-        font-size: var(--font-size-base);  /* CAMBIA de var(--font-size-lg) a var(--font-size-base) */
+        font-size: var(--font-size-base);
     }
     
     .nav__cta {
@@ -2137,6 +2154,15 @@ p {
     .testimonios__grid {
         grid-template-columns: 1fr;
     }
+
+    .testimonio-card__badge-destacado {
+        font-size: 0.75rem;
+        padding: 6px 12px;
+    }
+
+    .testimonio-card__badge-destacado i {
+        font-size: 0.875rem;
+    }
     
     .precios__grid {
         grid-template-columns: 1fr;
@@ -2162,6 +2188,7 @@ p {
         width: 45px;
         height: 45px;
     }
+
 }
 
 @media (max-width: 480px) {
@@ -2175,6 +2202,15 @@ p {
     
     .form__row {
         grid-template-columns: 1fr;
+    }
+
+    .testimonio-card__badge-destacado {
+        font-size: 0.6875rem;
+        padding: 4px 10px;
+    }
+
+    .testimonio-card__badge-destacado i {
+        font-size: 0.75rem;
     }
 }
 
