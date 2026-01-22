@@ -378,7 +378,7 @@
         });
 
         // Form submit
-        demoForm.addEventListener('submit', function(e) {
+        demoForm.addEventListener('submit', async function(e) {
             e.preventDefault();
 
             let isFormValid = true;
@@ -397,29 +397,41 @@
                 submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
                 submitButton.disabled = true;
 
-                // Simulate API call
-                setTimeout(() => {
-                    // Hide form and show success message
-                    demoForm.style.display = 'none';
-                    demoSuccess.style.display = 'block';
+                const formData = new FormData(demoForm);
 
-                    // Scroll to success message
-                    demoSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                try {
+                    const response = await fetch('php/guardar_sitio_web.php', {
+                        method: 'POST',
+                        body: formData
+                    });
 
-                    // Log form data (in production, this would be sent to an API)
-                    const formData = new FormData(demoForm);
-                    console.log('Form submitted with data:');
-                    for (let [key, value] of formData.entries()) {
-                        console.log(`${key}: ${value}`);
-                    }
+                    const result = await response.json();
 
-                    // Reset form for next use
-                    setTimeout(() => {
-                        demoForm.reset();
+                    if (result.success) {
+                        // Hide form and show success message
+                        demoForm.style.display = 'none';
+                        demoSuccess.style.display = 'block';
+
+                        // Scroll to success message
+                        demoSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+                        // Reset form for next use
+                        setTimeout(() => {
+                            demoForm.reset();
+                            submitButton.innerHTML = originalText;
+                            submitButton.disabled = false;
+                        }, 3000);
+                    } else {
+                        alert(result.message);
                         submitButton.innerHTML = originalText;
                         submitButton.disabled = false;
-                    }, 3000);
-                }, 1500);
+                    }
+                } catch (error) {
+                    console.error('Error:', error);
+                    alert('Error al conectar con el servidor. Intenta de nuevo.');
+                    submitButton.innerHTML = originalText;
+                    submitButton.disabled = false;
+                }
             } else {
                 // Scroll to first error
                 const firstError = demoForm.querySelector('.error');
