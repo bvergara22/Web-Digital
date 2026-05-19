@@ -1,0 +1,1251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Política Integral de Privacidad y Tratamiento de Datos de DIGITAL CX S.A.S. Conoce cómo protegemos tu información personal conforme a la Ley 1581 de 2012.">
+    <title>Política de Privacidad | DIGITAL CX</title>
+
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+        /* ===== LEGAL PAGE STYLES ===== */
+        .legal-hero {
+            background: var(--color-gray-900);
+            padding: 8rem 0 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .legal-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse 60% 80% at 50% 0%, rgba(127, 71, 221, 0.15) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .legal-hero__breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: var(--font-size-sm);
+            color: var(--color-gray-500);
+            margin-bottom: 1.5rem;
+        }
+
+        .legal-hero__breadcrumb a {
+            color: var(--color-gray-500);
+            text-decoration: none;
+            transition: color var(--transition-fast);
+        }
+
+        .legal-hero__breadcrumb a:hover {
+            color: var(--color-primary-light);
+        }
+
+        .legal-hero__breadcrumb i {
+            font-size: 0.65rem;
+            color: var(--color-gray-700);
+        }
+
+        .legal-hero__badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(127, 71, 221, 0.15);
+            border: 1px solid rgba(127, 71, 221, 0.3);
+            color: var(--color-primary-light);
+            padding: 0.4rem 1rem;
+            border-radius: var(--radius-full);
+            font-size: var(--font-size-sm);
+            font-weight: var(--font-weight-medium);
+            margin-bottom: 1.25rem;
+        }
+
+        .legal-hero__title {
+            font-size: var(--font-size-4xl);
+            font-weight: var(--font-weight-black);
+            color: var(--color-white);
+            line-height: var(--line-height-tight);
+            margin-bottom: 1rem;
+        }
+
+        .legal-hero__meta {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+        }
+
+        .legal-hero__meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: var(--font-size-sm);
+            color: var(--color-gray-400);
+        }
+
+        .legal-hero__meta-item i {
+            color: var(--color-primary-light);
+            font-size: 0.9rem;
+        }
+
+        /* ===== LAYOUT ===== */
+        .legal-layout {
+            background: var(--color-gray-50);
+            padding: 4rem 0 6rem;
+        }
+
+        .legal-layout .container {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        /* ===== SIDEBAR NAV ===== */
+        .legal-sidebar {
+            position: sticky;
+            top: 6rem;
+        }
+
+        .legal-nav {
+            background: var(--color-white);
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-md);
+            overflow: hidden;
+            border: 1px solid var(--color-gray-200);
+        }
+
+        .legal-nav__header {
+            background: var(--gradient-primary);
+            padding: 1.25rem 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .legal-nav__header i {
+            color: rgba(255,255,255,0.9);
+            font-size: 1.1rem;
+        }
+
+        .legal-nav__header span {
+            color: var(--color-white);
+            font-weight: var(--font-weight-semibold);
+            font-size: var(--font-size-sm);
+            letter-spacing: 0.02em;
+        }
+
+        .legal-nav__list {
+            list-style: none;
+            padding: 0.75rem 0;
+        }
+
+        .legal-nav__list li a {
+            display: flex;
+            align-items: center;
+            gap: 0.625rem;
+            padding: 0.6rem 1.5rem;
+            font-size: 0.8125rem;
+            color: var(--color-gray-600);
+            text-decoration: none;
+            transition: all var(--transition-fast);
+            border-left: 3px solid transparent;
+            line-height: 1.4;
+        }
+
+        .legal-nav__list li a i {
+            font-size: 0.75rem;
+            color: var(--color-gray-400);
+            flex-shrink: 0;
+            transition: color var(--transition-fast);
+        }
+
+        .legal-nav__list li a:hover,
+        .legal-nav__list li a.active {
+            color: var(--color-primary);
+            border-left-color: var(--color-primary);
+            background: rgba(127, 71, 221, 0.05);
+        }
+
+        .legal-nav__list li a:hover i,
+        .legal-nav__list li a.active i {
+            color: var(--color-primary);
+        }
+
+        .legal-nav__divider {
+            height: 1px;
+            background: var(--color-gray-100);
+            margin: 0.5rem 1.5rem;
+        }
+
+        .legal-nav__other {
+            padding: 0.75rem 1.5rem 1rem;
+            border-top: 1px solid var(--color-gray-100);
+            margin-top: 0.25rem;
+        }
+
+        .legal-nav__other-title {
+            font-size: 0.7rem;
+            font-weight: var(--font-weight-semibold);
+            color: var(--color-gray-400);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 0.5rem;
+        }
+
+        .legal-nav__other-list {
+            list-style: none;
+        }
+
+        .legal-nav__other-list li a {
+            display: block;
+            padding: 0.35rem 0;
+            font-size: 0.8rem;
+            color: var(--color-gray-500);
+            text-decoration: none;
+            transition: color var(--transition-fast);
+        }
+
+        .legal-nav__other-list li a:hover {
+            color: var(--color-primary);
+        }
+
+        /* ===== CONTENT ===== */
+        .legal-content {
+            background: var(--color-white);
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--color-gray-200);
+            overflow: hidden;
+        }
+
+        .legal-content__intro {
+            background: linear-gradient(135deg, rgba(127, 71, 221, 0.06) 0%, rgba(127, 71, 221, 0.02) 100%);
+            border-bottom: 1px solid var(--color-gray-200);
+            padding: 2.5rem;
+        }
+
+        .legal-content__intro p {
+            font-size: var(--font-size-base);
+            color: var(--color-gray-600);
+            line-height: var(--line-height-relaxed);
+            margin: 0;
+        }
+
+        .legal-content__intro strong {
+            color: var(--color-gray-800);
+        }
+
+        .legal-section {
+            padding: 2.5rem;
+            border-bottom: 1px solid var(--color-gray-100);
+            scroll-margin-top: 6rem;
+        }
+
+        .legal-section:last-child {
+            border-bottom: none;
+        }
+
+        .legal-section__number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 2rem;
+            height: 2rem;
+            background: var(--gradient-primary);
+            color: var(--color-white);
+            border-radius: var(--radius-md);
+            font-size: 0.75rem;
+            font-weight: var(--font-weight-bold);
+            flex-shrink: 0;
+        }
+
+        .legal-section__heading {
+            display: flex;
+            align-items: center;
+            gap: 0.875rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .legal-section__title {
+            font-size: var(--font-size-xl);
+            font-weight: var(--font-weight-bold);
+            color: var(--color-gray-900);
+            line-height: var(--line-height-tight);
+        }
+
+        .legal-section p {
+            font-size: var(--font-size-base);
+            color: var(--color-gray-600);
+            line-height: var(--line-height-relaxed);
+            margin-bottom: 1rem;
+        }
+
+        .legal-section p:last-child {
+            margin-bottom: 0;
+        }
+
+        .legal-section ul {
+            list-style: none;
+            margin: 0.75rem 0;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .legal-section ul li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.625rem;
+            font-size: var(--font-size-base);
+            color: var(--color-gray-600);
+            line-height: var(--line-height-relaxed);
+        }
+
+        .legal-section ul li::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--color-primary);
+            flex-shrink: 0;
+            margin-top: 0.55rem;
+        }
+
+        /* ===== CARDS INSIDE SECTIONS ===== */
+        .legal-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1.25rem;
+        }
+
+        .legal-card {
+            background: var(--color-gray-50);
+            border: 1px solid var(--color-gray-200);
+            border-radius: var(--radius-lg);
+            padding: 1.25rem;
+        }
+
+        .legal-card__icon {
+            width: 2.25rem;
+            height: 2.25rem;
+            background: rgba(127, 71, 221, 0.1);
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 0.75rem;
+        }
+
+        .legal-card__icon i {
+            color: var(--color-primary);
+            font-size: 0.9rem;
+        }
+
+        .legal-card__title {
+            font-size: var(--font-size-sm);
+            font-weight: var(--font-weight-semibold);
+            color: var(--color-gray-800);
+            margin-bottom: 0.375rem;
+        }
+
+        .legal-card__desc {
+            font-size: 0.8125rem;
+            color: var(--color-gray-500);
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        /* ===== HIGHLIGHT BOXES ===== */
+        .legal-highlight {
+            background: rgba(127, 71, 221, 0.06);
+            border-left: 3px solid var(--color-primary);
+            border-radius: 0 var(--radius-md) var(--radius-md) 0;
+            padding: 1rem 1.25rem;
+            margin: 1rem 0;
+        }
+
+        .legal-highlight p {
+            margin: 0;
+            font-size: var(--font-size-sm);
+            color: var(--color-gray-700);
+        }
+
+        .legal-highlight strong {
+            color: var(--color-primary-dark);
+        }
+
+        /* ===== CONTACT BOX ===== */
+        .legal-contact {
+            background: var(--color-gray-900);
+            border-radius: var(--radius-xl);
+            padding: 2rem;
+            margin-top: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .legal-contact__icon {
+            width: 3rem;
+            height: 3rem;
+            background: rgba(127, 71, 221, 0.2);
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .legal-contact__icon i {
+            color: var(--color-primary-light);
+            font-size: 1.25rem;
+        }
+
+        .legal-contact__body {
+            flex: 1;
+        }
+
+        .legal-contact__body h4 {
+            font-size: var(--font-size-base);
+            font-weight: var(--font-weight-semibold);
+            color: var(--color-white);
+            margin-bottom: 0.25rem;
+        }
+
+        .legal-contact__body p {
+            font-size: var(--font-size-sm);
+            color: var(--color-gray-400);
+            margin: 0;
+        }
+
+        .legal-contact__body a {
+            color: var(--color-primary-light);
+            text-decoration: none;
+        }
+
+        .legal-contact__body a:hover {
+            text-decoration: underline;
+        }
+
+        /* ===== DEFINITIONS GRID ===== */
+        .legal-definitions {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .legal-definition {
+            display: flex;
+            gap: 1rem;
+            padding: 1rem 1.25rem;
+            background: var(--color-gray-50);
+            border: 1px solid var(--color-gray-200);
+            border-radius: var(--radius-lg);
+        }
+
+        .legal-definition__term {
+            font-weight: var(--font-weight-semibold);
+            color: var(--color-primary-dark);
+            font-size: var(--font-size-sm);
+            min-width: 160px;
+            flex-shrink: 0;
+        }
+
+        .legal-definition__desc {
+            font-size: var(--font-size-sm);
+            color: var(--color-gray-600);
+            line-height: var(--line-height-relaxed);
+            margin: 0;
+        }
+
+        /* ===== DEADLINE PILLS ===== */
+        .legal-deadlines {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1rem;
+            margin-top: 1.25rem;
+        }
+
+        .legal-deadline {
+            background: var(--color-white);
+            border: 1px solid var(--color-gray-200);
+            border-radius: var(--radius-lg);
+            padding: 1.25rem;
+            text-align: center;
+            box-shadow: var(--shadow-xs);
+        }
+
+        .legal-deadline__number {
+            font-size: var(--font-size-3xl);
+            font-weight: var(--font-weight-black);
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1;
+            margin-bottom: 0.25rem;
+        }
+
+        .legal-deadline__unit {
+            font-size: var(--font-size-sm);
+            font-weight: var(--font-weight-semibold);
+            color: var(--color-gray-700);
+        }
+
+        .legal-deadline__label {
+            font-size: 0.8rem;
+            color: var(--color-gray-500);
+            margin-top: 0.25rem;
+        }
+
+        /* ===== RIGHTS GRID ===== */
+        .legal-rights {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 0.875rem;
+            margin-top: 1.25rem;
+        }
+
+        .legal-right {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            padding: 0.875rem 1rem;
+            background: var(--color-gray-50);
+            border: 1px solid var(--color-gray-200);
+            border-radius: var(--radius-lg);
+            transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+        }
+
+        .legal-right:hover {
+            border-color: rgba(127, 71, 221, 0.3);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .legal-right__icon {
+            width: 2rem;
+            height: 2rem;
+            background: rgba(127, 71, 221, 0.1);
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .legal-right__icon i {
+            color: var(--color-primary);
+            font-size: 0.75rem;
+        }
+
+        .legal-right__text {
+            font-size: 0.8125rem;
+            font-weight: var(--font-weight-medium);
+            color: var(--color-gray-700);
+            line-height: 1.4;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .legal-layout .container {
+                grid-template-columns: 240px 1fr;
+                gap: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .legal-layout .container {
+                grid-template-columns: 1fr;
+            }
+
+            .legal-sidebar {
+                position: static;
+            }
+
+            .legal-hero {
+                padding: 7rem 0 3rem;
+            }
+
+            .legal-hero__title {
+                font-size: var(--font-size-3xl);
+            }
+
+            .legal-section {
+                padding: 2rem 1.5rem;
+            }
+
+            .legal-content__intro {
+                padding: 1.75rem 1.5rem;
+            }
+
+            .legal-definition {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .legal-definition__term {
+                min-width: unset;
+            }
+
+            .legal-contact {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .legal-contact__icon {
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip Link -->
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="../index.html" class="nav__logo" aria-label="DIGITAL CX - Inicio">
+                <i class="fas fa-chart-network" aria-hidden="true"></i>
+                <span>DIGITAL CX</span>
+            </a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="../index.html#producto" class="nav__link">Producto</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="../index.html#funciones" class="nav__link">Funciones</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="../index.html#beneficios" class="nav__link">Beneficios</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="../index.html#casos" class="nav__link">Casos de Uso</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="../index.html#testimonios" class="nav__link">Testimonios</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="../index.html#precios" class="nav__link">Precios</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="nav__cta">
+                <a href="../index.html#demo" class="btn btn--outline btn--sm">Prueba Gratuita</a>
+            </div>
+
+            <button class="nav__toggle" id="nav-toggle" aria-label="Abrir menú de navegación" aria-expanded="false">
+                <span class="nav__toggle-line"></span>
+                <span class="nav__toggle-line"></span>
+                <span class="nav__toggle-line"></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+
+        <!-- Hero -->
+        <section class="legal-hero">
+            <div class="container">
+                <nav class="legal-hero__breadcrumb" aria-label="Breadcrumb">
+                    <a href="../index.html">Inicio</a>
+                    <i class="fas fa-chevron-right"></i>
+                    <a href="#">Legal</a>
+                    <i class="fas fa-chevron-right"></i>
+                    <span>Política de Privacidad</span>
+                </nav>
+
+                <span class="legal-hero__badge">
+                    <i class="fas fa-shield-alt"></i>
+                    Legal
+                </span>
+
+                <h1 class="legal-hero__title">Política Integral de <span class="gradient-text">Privacidad</span></h1>
+
+                <div class="legal-hero__meta">
+                    <div class="legal-hero__meta-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>Vigencia: Mayo 2026</span>
+                    </div>
+                    <div class="legal-hero__meta-item">
+                        <i class="fas fa-sync-alt"></i>
+                        <span>Última actualización: 19 de mayo de 2026</span>
+                    </div>
+                    <div class="legal-hero__meta-item">
+                        <i class="fas fa-balance-scale"></i>
+                        <span>Ley 1581 de 2012</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Layout -->
+        <div class="legal-layout">
+            <div class="container">
+
+                <!-- Sidebar -->
+                <aside class="legal-sidebar">
+                    <nav class="legal-nav" aria-label="Índice de la política">
+                        <div class="legal-nav__header">
+                            <i class="fas fa-list-ul"></i>
+                            <span>Contenido</span>
+                        </div>
+                        <ul class="legal-nav__list">
+                            <li><a href="#responsable"><i class="fas fa-building"></i> 1. Responsable del Tratamiento</a></li>
+                            <li><a href="#marco-legal"><i class="fas fa-gavel"></i> 2. Marco Legal</a></li>
+                            <li><a href="#definiciones"><i class="fas fa-book-open"></i> 3. Definiciones</a></li>
+                            <li><a href="#datos-recolectados"><i class="fas fa-database"></i> 4. Datos Recolectados</a></li>
+                            <li><a href="#finalidades"><i class="fas fa-bullseye"></i> 5. Finalidades</a></li>
+                            <li><a href="#autorizacion"><i class="fas fa-file-signature"></i> 6. Autorización</a></li>
+                            <li><a href="#derechos"><i class="fas fa-user-shield"></i> 7. Derechos de los Titulares</a></li>
+                            <li><a href="#consultas"><i class="fas fa-headset"></i> 8. Consultas y Reclamos</a></li>
+                            <li><a href="#transferencia"><i class="fas fa-globe-americas"></i> 9. Transferencia Internacional</a></li>
+                            <li><a href="#seguridad"><i class="fas fa-lock"></i> 10. Seguridad</a></li>
+                            <li><a href="#cookies"><i class="fas fa-cookie-bite"></i> 11. Política de Cookies</a></li>
+                            <li><a href="#go-cx-crm"><i class="fas fa-server"></i> 12. GO CX CRM</a></li>
+                            <li><a href="#conservacion"><i class="fas fa-archive"></i> 13. Conservación</a></li>
+                            <li><a href="#menores"><i class="fas fa-child"></i> 14. Menores de Edad</a></li>
+                            <li><a href="#vigencia"><i class="fas fa-calendar-check"></i> 15. Vigencia</a></li>
+                        </ul>
+                        <div class="legal-nav__other">
+                            <p class="legal-nav__other-title">Otros documentos legales</p>
+                            <ul class="legal-nav__other-list">
+                                <li><a href="#">Términos de Servicio</a></li>
+                                <li><a href="#">Política de Cookies</a></li>
+                                <li><a href="#">GDPR</a></li>
+                                <li><a href="#">Seguridad</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </aside>
+
+                <!-- Content -->
+                <article class="legal-content">
+
+                    <!-- Intro -->
+                    <div class="legal-content__intro">
+                        <p>
+                            Esta <strong>Política Integral de Privacidad y Tratamiento de Datos</strong> describe cómo <strong>DIGITAL CX S.A.S.</strong> recopila, utiliza, almacena y protege la información personal de los usuarios de su sitio web, plataformas digitales y del software GO CX CRM, de conformidad con la normativa colombiana de protección de datos personales.
+                        </p>
+                    </div>
+
+                    <!-- 1. Responsable -->
+                    <section class="legal-section" id="responsable">
+                        <div class="legal-section__heading">
+                            <span class="legal-section__number">1</span>
+                            <h2 class="legal-section__title">Identificación del Responsable del Tratamiento</h2>
+                        </div>
+                        <p>
+                            DIGITAL CX S.A.S. (en adelante "DIGITAL CX") es responsable del tratamiento de los datos personales recolectados a través de su sitio web, plataformas digitales y del software GO CX CRM.
+                        </p>
+
+                        <div class="legal-contact">
+                            <div class="legal-contact__icon">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <div class="legal-contact__body">
+                                <h4>DIGITAL CX S.A.S.</h4>
+                                <p>
+                                    Correo electrónico: <a href="mailto:cto@digitalcx.com.co">cto@digitalcx.com.co</a><br>
+                                    Sitio web: <a href="https://digitalcx.com.co" target="_blank" rel="noopener noreferrer">digitalcx.com.co</a>
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- 2. Marco Legal -->
+                    <section class="legal-section" id="marco-legal">
+                        <div class="legal-section__heading">
+                            <span class="legal-section__number">2</span>
+                            <h2 class="legal-section__title">Marco Legal Aplicable</h2>
+                        </div>
+                        <p>Esta política se adopta conforme a:</p>
+                        <ul>
+                            <li>Ley 1581 de 2012 — Protección de Datos Personales en Colombia.</li>
+                            <li>Decreto 1377 de 2013 — Reglamentario de la Ley 1581.</li>
+                            <li>Normas emitidas por la Superintendencia de Industria y Comercio de Colombia.</li>
+                            <li>Demás normas complementarias sobre protección de datos personales.</li>
+                        </ul>
+                    </section>
+
+                    <!-- 3. Definiciones -->
+                    <section class="legal-section" id="definiciones">
+                        <div class="legal-section__heading">
+                            <span class="legal-section__number">3</span>
+                            <h2 class="legal-section__title">Definiciones</h2>
+                        </div>
+                        <p>Para efectos de la presente política, se entenderán los siguientes términos:</p>
+
+                        <div class="legal-definitions">
+                            <div class="legal-definition">
+                                <span class="legal-definition__term">Dato Personal</span>
+                                <p class="legal-definition__desc">Información vinculada o asociada a una persona natural identificada o identificable.</p>
+                            </div>
+                            <div class="legal-definition">
+                                <span class="legal-definition__term">Titular</span>
+                                <p class="legal-definition__desc">Persona natural cuyos datos personales son objeto de tratamiento.</p>
+                            </div>
+                            <div class="legal-definition">
+                                <span class="legal-definition__term">Tratamiento</span>
+                                <p class="legal-definition__desc">Cualquier operación sobre datos personales como recolección, almacenamiento, uso, circulación o supresión.</p>
+                            </div>
+                            <div class="legal-definition">
+                                <span class="legal-definition__term">Responsable del Tratamiento</span>
+                                <p class="legal-definition__desc">Persona jurídica que decide sobre las bases de datos y el tratamiento.</p>
+                            </div>
+                            <div class="legal-definition">
+                                <span class="legal-definition__term">Encargado del Tratamiento</span>
+                                <p class="legal-definition__desc">Persona natural o jurídica que realiza el tratamiento por cuenta del responsable.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- 4. Datos Recolectados -->
+                    <section class="legal-section" id="datos-recolectados">
+                        <div class="legal-section__heading">
+                            <span class="legal-section__number">4</span>
+                            <h2 class="legal-section__title">Datos Personales Recolectados</h2>
+                        </div>
+                        <p>DIGITAL CX podrá recolectar las siguientes categorías de datos personales:</p>
+
+                        <div class="legal-cards">
+                            <div class="legal-card">
+                                <div class="legal-card__icon">
+                                    <i class="fas fa-id-card"></i>
+                                </div>
+                                <h3 class="legal-card__title">Identificación y Contacto</h3>
+                                <p class="legal-card__desc">Nombre y apellidos, correo electrónico, número telefónico, empresa y cargo.</p>
+                            </div>
+                            <div class="legal-card">
+                                <div class="legal-card__icon">
+                                    <i class="fas fa-laptop-code"></i>
+                                </div>
+                                <h3 class="legal-card__title">Datos Técnicos</h3>
+                                <p class="legal-card__desc">Dirección IP, tipo de navegador, sistema operativo, cookies e información de navegación.</p>
+                            </div>
+                            <div class="legal-card">
+                                <div class="legal-card__icon">
+                                    <i class="fas fa-briefcase"></i>
+                                </div>
+                                <h3 class="legal-card__title">Datos Comerciales</h3>
+                                <p class="legal-card__desc">Prospectos, clientes, actividades comerciales, conversaciones e información operativa (a través de GO CX CRM).</p>
+                            </div>
+                        </div>
+
+                        <div class="legal-highlight" style="margin-top: 1.5rem;">
+                            <p>En el contexto de GO CX CRM, <strong>el cliente actúa como Responsable del Tratamiento</strong> y DIGITAL CX actúa como <strong>Encargado del Tratamiento</strong>, procesando los datos únicamente conforme a las instrucciones del cliente.</p>
+                        </div>
+                    </section>
+
+                    <!-- 5. Finalidades -->
+                    <section class="legal-section" id="finalidades">
+                        <div class="legal-section__heading">
+                            <span class="legal-section__number">5</span>
+                            <h2 class="legal-section__title">Finalidades del Tratamiento</h2>
+                        </div>
+                        <p>Los datos personales serán utilizados para las siguientes finalidades:</p>
+                        <ul>
+                            <li>Gestionar solicitudes comerciales.</li>
+                            <li>Prestar servicios tecnológicos.</li>
+                            <li>Administrar accesos y usuarios.</li>
+                            <li>Realizar soporte técnico.</li>
+                            <li>Ejecutar procesos de facturación.</li>
+                            <li>Enviar comunicaciones comerciales y promocionales.</li>
+                            <li>Mejorar funcionalidades y experiencia de usuario.</li>
+                            <li>Realizar análisis estadísticos internos.</li>
+                            <li>Garantizar la seguridad de la plataforma.</li>
+                            <li>Cumplir obligaciones legales y contractuales.</li>
+                        </ul>
+                    </section>
+
+                    <!-- 6. Autorización -->
+                    <section class="legal-section" id="autorizacion">
+                        <div class="legal-section__heading">
+                            <span class="legal-section__number">6</span>
+                            <h2 class="legal-section__title">Autorización del Titular</h2>
+                        </div>
+                        <p>
+                            DIGITAL CX solicitará autorización previa, expresa e informada para el tratamiento de datos personales. Dicha autorización podrá obtenerse mediante:
+                        </p>
+                        <ul>
+                            <li>Formularios web.</li>
+                            <li>Casillas de aceptación.</li>
+                            <li>Contratos.</li>
+                            <li>Correos electrónicos.</li>
+                            <li>Registros digitales.</li>
+                            <li>Aceptación de cookies.</li>
+                        </ul>
+                    </section>
+
+                    <!-- 7. Derechos -->
+                    <section class="legal-section" id="derechos">
+                        <div class="legal-section__heading">
+                            <span class="legal-section__number">7</span>
+                            <h2 class="legal-section__title">Derechos de los Titulares</h2>
+                        </div>
+                        <p>
+                            De conformidad con la Ley 1581 de 2012, los titulares de los datos personales tienen los siguientes derechos:
+                        </p>
+
+                        <div class="legal-rights">
+                            <div class="legal-right">
+                                <div class="legal-right__icon">
+                                    <i class="fas fa-eye"></i>
+                                </div>
+                                <span class="legal-right__text">Acceder a sus datos personales</span>
+                            </div>
+                            <div class="legal-right">
+                                <div class="legal-right__icon">
+                                    <i class="fas fa-edit"></i>
+                                </div>
+                                <span class="legal-right__text">Actualizar o corregir información</span>
+                            </div>
+                            <div class="legal-right">
+                                <div class="legal-right__icon">
+                                    <i class="fas fa-file-alt"></i>
+                                </div>
+                                <span class="legal-right__text">Solicitar prueba de autorización</span>
+                            </div>
+                            <div class="legal-right">
+                                <div class="legal-right__icon">
+                                    <i class="fas fa-times-circle"></i>
+                                </div>
+                                <span class="legal-right__text">Revocar el consentimiento</span>
+                            </div>
+                            <div class="legal-right">
+                                <div class="legal-right__icon">
+                                    <i class="fas fa-trash-alt"></i>
+                                </div>
+                                <span class="legal-right__text">Solicitar eliminación de datos</span>
+                            </div>
+                            <div class="legal-right">
+                                <div class="legal-right__icon">
+                                    <i class="fas fa-comment-alt"></i>
+                                </div>
+                                <span class="legal-right__text">Presentar consultas o reclamos</span>
+                            </div>
+                            <div class="legal-right">
+                                <div class="legal-right__icon">
+                                    <i class="fas fa-balance-scale"></i>
+                                </div>
+                                <span class="legal-right__text">Acudir ante la Superintendencia de Industria y Comercio</span>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- 8. Consultas y Reclamos -->
+                    <section class="legal-section" id="consultas">
+                        <div class="legal-section__heading">
+                            <span class="legal-section__number">8</span>
+                            <h2 class="legal-section__title">Procedimiento para Consultas y Reclamos</h2>
+                        </div>
+                        <p>
+                            Las consultas y reclamos relacionados con el tratamiento de datos personales podrán enviarse al correo electrónico <a href="mailto:cto@digitalcx.com.co" style="color: var(--color-primary);">cto@digitalcx.com.co</a>.
+                        </p>
+
+                        <div class="legal-deadlines">
+                            <div class="legal-deadline">
+                                <div class="legal-deadline__number">10</div>
+                                <div class="legal-deadline__unit">días hábiles</div>
+                                <div class="legal-deadline__label">Tiempo de respuesta para Consultas</div>
+                            </div>
+                            <div class="legal-deadline">
+                                <div class="legal-deadline__number">15</div>
+                                <div class="legal-deadline__unit">días hábiles</div>
+                                <div class="legal-deadline__label">Tiempo de respuesta para Reclamos</div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- 9. Transferencia Internacional -->
+                    <section class="legal-section" id="transferencia">
+                        <div class="legal-section__heading">
+                            <span class="legal-section__number">9</span>
+                            <h2 class="legal-section__title">Transferencia y Transmisión Internacional de Datos</h2>
+                        </div>
+                        <p>
+                            DIGITAL CX podrá utilizar proveedores cloud o servicios tecnológicos ubicados fuera de Colombia para la prestación de sus servicios.
+                        </p>
+                        <p>Cuando exista transferencia internacional de datos, DIGITAL CX garantiza que:</p>
+                        <ul>
+                            <li>Se implementarán medidas de seguridad adecuadas para la protección de la información.</li>
+                            <li>Se suscribirán acuerdos de tratamiento de datos con los proveedores.</li>
+                            <li>Se cumplirán todas las normas aplicables en materia de protección de datos.</li>
+                        </ul>
+                    </section>
+
+                    <!-- 10. Seguridad -->
+                    <section class="legal-section" id="seguridad">
+                        <div class="legal-section__heading">
+                            <span class="legal-section__number">10</span>
+                            <h2 class="legal-section__title">Seguridad de la Información</h2>
+                        </div>
+                        <p>
+                            DIGITAL CX implementa medidas técnicas, administrativas y organizacionales razonables para proteger la información personal de sus usuarios y clientes.
+                        </p>
+                        <p>Estas medidas buscan prevenir:</p>
+
+                        <div class="legal-cards">
+                            <div class="legal-card">
+                                <div class="legal-card__icon"><i class="fas fa-user-slash"></i></div>
+                                <h3 class="legal-card__title">Acceso no autorizado</h3>
+                                <p class="legal-card__desc">Controles de acceso y autenticación para proteger la información.</p>
+                            </div>
+                            <div class="legal-card">
+                                <div class="legal-card__icon"><i class="fas fa-exclamation-triangle"></i></div>
+                                <h3 class="legal-card__title">Pérdida de información</h3>
+                                <p class="legal-card__desc">Backups automáticos y redundancia de datos.</p>
+                            </div>
+                            <div class="legal-card">
+                                <div class="legal-card__icon"><i class="fas fa-ban"></i></div>
+                                <h3 class="legal-card__title">Alteración indebida</h3>
+                                <p class="legal-card__desc">Controles de integridad y auditoría de cambios.</p>
+                            </div>
+                            <div class="legal-card">
+                                <div class="legal-card__icon"><i class="fas fa-eye-slash"></i></div>
+                                <h3 class="legal-card__title">Divulgación no autorizada</h3>
+                                <p class="legal-card__desc">Encriptación SSL y protocolos de confidencialidad.</p>
+                            </div>
+                            <div class="legal-card">
+                                <div class="legal-card__icon"><i class="fas fa-shield-virus"></i></div>
+                                <h3 class="legal-card__title">Uso fraudulento</h3>
+                                <p class="legal-card__desc">Monitoreo continuo y detección de anomalías.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- 11. Cookies -->
+                    <section class="legal-section" id="cookies">
+                        <div class="legal-section__heading">
+                            <span class="legal-section__number">11</span>
+                            <h2 class="legal-section__title">Política de Cookies</h2>
+                        </div>
+                        <p>
+                            El sitio web de DIGITAL CX utiliza cookies y tecnologías similares con las siguientes finalidades:
+                        </p>
+                        <ul>
+                            <li>Recordar preferencias y configuraciones del usuario.</li>
+                            <li>Analizar el tráfico y comportamiento de navegación.</li>
+                            <li>Mejorar las funcionalidades y la experiencia de uso.</li>
+                            <li>Ejecutar campañas de analítica y marketing digital.</li>
+                        </ul>
+
+                        <div class="legal-highlight">
+                            <p>El usuario podrá deshabilitar las cookies desde la configuración de su navegador en cualquier momento. Sin embargo, esto podría afectar algunas funcionalidades del sitio.</p>
+                        </div>
+                    </section>
+
+                    <!-- 12. GO CX CRM -->
+                    <section class="legal-section" id="go-cx-crm">
+                        <div class="legal-section__heading">
+                            <span class="legal-section__number">12</span>
+                            <h2 class="legal-section__title">Tratamiento de Datos en GO CX CRM</h2>
+                        </div>
+                        <p>
+                            GO CX CRM es una plataforma tecnológica para la gestión comercial y el relacionamiento con clientes. En el marco de la prestación de este servicio:
+                        </p>
+
+                        <p><strong>DIGITAL CX como Encargado del Tratamiento:</strong></p>
+                        <ul>
+                            <li>No utilizará los datos de clientes para fines propios.</li>
+                            <li>Solo tratará información conforme a instrucciones del cliente-responsable.</li>
+                            <li>Mantendrá estrictos deberes de confidencialidad sobre la información procesada.</li>
+                        </ul>
+
+                        <p><strong>Responsabilidades del cliente:</strong></p>
+                        <ul>
+                            <li>Obtener autorizaciones válidas de sus usuarios finales.</li>
+                            <li>Cumplir la normativa aplicable en su jurisdicción.</li>
+                            <li>Definir los tiempos de conservación de la información.</li>
+                        </ul>
+                    </section>
+
+                    <!-- 13. Conservación -->
+                    <section class="legal-section" id="conservacion">
+                        <div class="legal-section__heading">
+                            <span class="legal-section__number">13</span>
+                            <h2 class="legal-section__title">Conservación de la Información</h2>
+                        </div>
+                        <p>Los datos personales serán conservados durante el tiempo necesario para cumplir las finalidades del tratamiento:</p>
+                        <ul>
+                            <li>Mientras exista relación contractual vigente con el titular.</li>
+                            <li>Mientras exista una obligación legal que requiera la conservación de la información.</li>
+                            <li>Hasta que proceda la eliminación válidamente solicitada por el titular.</li>
+                        </ul>
+                    </section>
+
+                    <!-- 14. Menores -->
+                    <section class="legal-section" id="menores">
+                        <div class="legal-section__heading">
+                            <span class="legal-section__number">14</span>
+                            <h2 class="legal-section__title">Menores de Edad</h2>
+                        </div>
+                        <p>
+                            DIGITAL CX no recopila deliberadamente datos personales de menores de edad. Nuestros servicios están dirigidos exclusivamente a personas mayores de 18 años.
+                        </p>
+                        <div class="legal-highlight">
+                            <p>En caso de detectarse información de menores sin autorización válida de sus representantes legales, dicha información será eliminada de forma inmediata.</p>
+                        </div>
+                    </section>
+
+                    <!-- 15. Vigencia -->
+                    <section class="legal-section" id="vigencia">
+                        <div class="legal-section__heading">
+                            <span class="legal-section__number">15</span>
+                            <h2 class="legal-section__title">Vigencia y Modificaciones</h2>
+                        </div>
+                        <p>
+                            La presente política entra en vigencia desde su publicación y permanecerá vigente mientras DIGITAL CX realice tratamiento de datos personales.
+                        </p>
+                        <p>
+                            DIGITAL CX se reserva el derecho de modificar esta política en cualquier momento. Las actualizaciones serán publicadas en el sitio web con indicación de la fecha de la última modificación. Se recomienda a los titulares revisar periódicamente esta política.
+                        </p>
+
+                        <div class="legal-contact" style="margin-top: 1.5rem;">
+                            <div class="legal-contact__icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="legal-contact__body">
+                                <h4>¿Tienes preguntas sobre esta política?</h4>
+                                <p>
+                                    Escríbenos a <a href="mailto:cto@digitalcx.com.co">cto@digitalcx.com.co</a> y nuestro equipo te atenderá en los tiempos establecidos.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__column footer__column--brand">
+                    <a href="../index.html" class="footer__logo">
+                        <i class="fas fa-chart-network"></i>
+                        <span>DIGITAL CX</span>
+                    </a>
+                    <p class="footer__description">
+                        El CRM todo-en-uno diseñado para PYMES que buscan crecer sin complicaciones. Centraliza, automatiza y escala tu negocio.
+                    </p>
+                    <div class="footer__social">
+                        <a href="#" class="footer__social-link" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="footer__social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="footer__social-link" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="footer__social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="footer__social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer__column">
+                    <h4 class="footer__title">Producto</h4>
+                    <ul class="footer__list">
+                        <li><a href="../index.html#funciones">Funciones</a></li>
+                        <li><a href="../index.html#beneficios">Beneficios</a></li>
+                        <li><a href="../index.html#precios">Precios</a></li>
+                        <li><a href="../index.html#casos">Casos de Uso</a></li>
+                        <li><a href="#">Integraciones</a></li>
+                        <li><a href="#">API</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__column">
+                    <h4 class="footer__title">Recursos</h4>
+                    <ul class="footer__list">
+                        <li><a href="#">Centro de Ayuda</a></li>
+                        <li><a href="#">Tutoriales</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Webinars</a></li>
+                        <li><a href="#">Comunidad</a></li>
+                        <li><a href="#">Estado del Servicio</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__column">
+                    <h4 class="footer__title">Empresa</h4>
+                    <ul class="footer__list">
+                        <li><a href="#">Sobre Nosotros</a></li>
+                        <li><a href="#">Clientes</a></li>
+                        <li><a href="#">Partners</a></li>
+                        <li><a href="#">Carreras</a></li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__column">
+                    <h4 class="footer__title">Legal</h4>
+                    <ul class="footer__list">
+                        <li><a href="politica-privacidad.html">Términos de Servicio</a></li>
+                        <li><a href="politica-privacidad.html" style="color: var(--color-primary-light);">Política de Privacidad</a></li>
+                        <li><a href="politica-privacidad.html">Política de Cookies</a></li>
+                        <li><a href="politica-privacidad.html">GDPR</a></li>
+                        <li><a href="politica-privacidad.html">Seguridad</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <p class="footer__copyright">
+                    &copy; 2026 DIGITAL CX. Todos los derechos reservados.
+                </p>
+                <div class="footer__badges">
+                    <span class="footer__badge"><i class="fas fa-shield-alt"></i> SSL Seguro</span>
+                    <span class="footer__badge"><i class="fas fa-check-circle"></i> GDPR Compliant</span>
+                    <span class="footer__badge"><i class="fas fa-server"></i> 99.9% Uptime</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top -->
+    <button class="scroll-to-top" id="scroll-to-top" aria-label="Volver arriba">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="../js/main.js"></script>
+    <script>
+        /* Active nav link on scroll */
+        const sections = document.querySelectorAll('.legal-section[id]');
+        const navLinks = document.querySelectorAll('.legal-nav__list a');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    navLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === '#' + entry.target.id) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            });
+        }, { rootMargin: '-20% 0px -70% 0px' });
+
+        sections.forEach(section => observer.observe(section));
+    </script>
+</body>
+</html>
